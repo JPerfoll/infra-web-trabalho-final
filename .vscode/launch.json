@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - InfraWebTrabalhoFinalApplication",
+            "request": "launch",
+            "mainClass": "br.edu.unidavi.infrawebtrabalhofinal.InfraWebTrabalhoFinalApplication",
+            "projectName": "infra-web-trabalho-final"
+        }
+    ]
+}
