@@ -36,7 +36,10 @@ public class PedidoRestController {
 	
 	@PostConstruct
 	public void init() {
-	
+		repository.save(new Pedido(1l, 1l, 55.99, new Date()));
+		repository.save(new Pedido(2l, 2l, 25.00, new Date()));
+		repository.save(new Pedido(3l, 3l, 30.50, new Date()));
+		repository.save(new Pedido(4l, 4l, 98.00, new Date()));
 	}
 	
 	@Secured("ROLE_USER")
@@ -93,7 +96,7 @@ public class PedidoRestController {
 	
 	@PreAuthorize("hasRole('ROLE_USER')")
 	@GetMapping("/datacriacao/{data}")
-	public ResponseEntity<List<PedidoResource>> findByNome(@PathVariable Date data) {
+	public ResponseEntity<List<PedidoResource>> findByDataCriacao(@PathVariable Date data) {
 		return new ResponseEntity<>(assembler.toResources(repository.findByDataCriacao(data)), HttpStatus.OK);
 	}
 }

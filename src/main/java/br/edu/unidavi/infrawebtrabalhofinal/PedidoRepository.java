@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
-	@Query("SELECT p FROM Pedido p WHERE p.dataCriacao = :data")
+	@Query("SELECT p FROM Pedido p WHERE TO_CHAR(p.dataCriacao,'YYYY-MM-DD') = :data")
 	List<Pedido> findByDataCriacao(@Param("data") Date data);
+	
 }

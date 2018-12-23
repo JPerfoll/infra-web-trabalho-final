@@ -36,6 +36,12 @@ public class ProdutoRestController {
 	@PostConstruct
 	public void init() {
 	
+		repository.save(new Produto(1l, "Produto 1", "Marca 1", 5.99));
+		repository.save(new Produto(2l, "Produto 2", "Marca 2", 17.99));
+		repository.save(new Produto(3l, "Produto 3", "Marca 3", 24.00));
+		repository.save(new Produto(4l, "Produto 4", "Marca 4", 55.00));
+		repository.save(new Produto(5l, "Produto 5", "Marca 5", 98.50));
+		
 	}
 	
 	@Secured("ROLE_USER")

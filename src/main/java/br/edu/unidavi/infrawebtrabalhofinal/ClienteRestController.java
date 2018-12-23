@@ -1,5 +1,6 @@
 package br.edu.unidavi.infrawebtrabalhofinal;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -29,6 +30,12 @@ public class ClienteRestController {
 	
 	@PostConstruct
 	public void init() {
+		
+		repository.save(new Cliente(1l, "Jean", "jeanperfoll@gmail.com", "085.999.454-56", new Date("17/05/1993")));
+		repository.save(new Cliente(2l, "Cristina", "cristina@gmail.com", "085.999.454-56", new Date("24/07/1963")));
+		repository.save(new Cliente(3l, "Laura", "laura@gmail.com", "085.999.454-56", new Date("07/02/2009")));
+		repository.save(new Cliente(4l, "João", "joao@gmail.com", "085.999.454-56", new Date("09/11/1960")));
+		repository.save(new Cliente(5l, "Jaqueline", "jaqueline@gmail.com", "085.999.454-56", new Date("07/11/1989")));
 	
 	}
 	

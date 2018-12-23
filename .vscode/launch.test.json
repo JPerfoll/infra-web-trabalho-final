@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "infra-web-trabalho-final",
+                "projectName": "infra-web-trabalho-final",
+                "workingDirectory": "c:\\Jean\\Pos\\Infraestrutura Agil\\infra-web-trabalho-final",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "infra-web-trabalho-final",
+                "projectName": "infra-web-trabalho-final",
+                "workingDirectory": "c:\\Jean\\Pos\\Infraestrutura Agil\\infra-web-trabalho-final",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}

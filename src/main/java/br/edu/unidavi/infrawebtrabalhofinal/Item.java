@@ -2,9 +2,8 @@ package br.edu.unidavi.infrawebtrabalhofinal;
 
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,13 +19,12 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
+@IdClass(ChaveComposta.class)
 public class Item {
-	
-	@Id @GeneratedValue(strategy=GenerationType.AUTO)
-	Long id;
-	
-	Integer quantidade;
-	Double total;
-	Integer pedido_id;
-	Integer produto_id;
+    @Id
+    Long pedido_id;
+    @Id
+    Long produto_id;
+    Integer quantidade;
+    Double total;
 }

@@ -35,6 +35,12 @@ public class EnderecoRestController {
 	@PostConstruct
 	public void init() {
 
+		repository.save(new Endereco(1l, "Beco Arnoldo Molinari", "Rio do Sul", "SC", "89160334", 1l));
+		repository.save(new Endereco(2l, "Rua Teste", "Rio do Sul", "PR", "895623332", 2l));
+		repository.save(new Endereco(3l, "Rua XV de Novembro", "Rio do Sul", "SC", "89160033", 3l));
+		repository.save(new Endereco(4l, "Avenida Oscar Barcelos", "Rio do Sul", "SC", "89520114", 4l));
+		repository.save(new Endereco(5l, "Beco Arnoldo Molinari", "Rio do Sul", "SC", "89160334", 5l));
+		
 	}
 	
 	@Secured("ROLE_USER")
